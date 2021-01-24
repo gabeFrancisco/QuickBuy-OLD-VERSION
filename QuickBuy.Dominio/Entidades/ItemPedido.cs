@@ -8,7 +8,8 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (Quantidade <= 0)
+                AdicionarCritica("Quantidade não pode ser menor ou igual a zero");
         }
     }
 }

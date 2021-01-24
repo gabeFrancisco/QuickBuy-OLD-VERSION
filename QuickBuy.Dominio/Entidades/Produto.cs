@@ -1,4 +1,6 @@
-﻿namespace QuickBuy.Dominio.Entidades
+﻿using System;
+
+namespace QuickBuy.Dominio.Entidades
 {
     public class Produto : Entidade
     {
@@ -9,7 +11,14 @@
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (String.IsNullOrEmpty(Nome))
+                AdicionarCritica("Nome não pode ser nulo");
+
+            if (String.IsNullOrEmpty(Descricao))
+                AdicionarCritica("Descrição não pode ser nulo");
+
+            if (Preco <= 0M)
+                AdicionarCritica("Preço não pode ser menor que 0");
         }
     }
 }

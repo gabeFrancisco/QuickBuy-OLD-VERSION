@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace QuickBuy.Dominio.Entidades
 {
@@ -18,7 +19,14 @@ namespace QuickBuy.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (String.IsNullOrEmpty(Email))
+                AdicionarCritica("Email não pode ser nulo");
+
+            if (String.IsNullOrEmpty(Senha))
+                AdicionarCritica("Senha não pode ser nulo");
+
+            if (String.IsNullOrEmpty(Nome))
+                AdicionarCritica("Nome não pode ser nulo");
         }
     }
 }
