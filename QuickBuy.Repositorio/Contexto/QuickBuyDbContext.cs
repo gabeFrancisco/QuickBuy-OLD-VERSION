@@ -16,5 +16,8 @@ namespace QuickBuy.Repositorio.Contexto
 
         //Objetos de valor
         public DbSet<FormaPagamento> FormaPagamento { get; set; }
+
+        //Construtor
+        public QuickBuyDbContext(DbContextOptions options) : base(options) { }
     }
 }
