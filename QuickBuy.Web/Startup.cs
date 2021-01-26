@@ -28,7 +28,8 @@ namespace QuickBuy.Web
             //Configuração do DbContext
             var connectionString = Configuration.GetConnectionString("MySqlConnection");
             services.AddDbContext<QuickBuyDbContext>(option => 
-                                                        option.UseMySql(connectionString, m => 
+                                                        option.UseLazyLoadingProxies()
+                                                        .UseMySql(connectionString, m => 
                                                         m.MigrationsAssembly("QuickBuy.Repositorio")));
 
             services.AddControllersWithViews();
