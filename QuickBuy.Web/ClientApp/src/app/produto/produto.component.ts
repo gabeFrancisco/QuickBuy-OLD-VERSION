@@ -3,9 +3,8 @@
 import { Component } from "@angular/core"
 
 @Component({
-  selector: "produto",
-  template: "",
-  templateUrl: ""
+  selector: 'app-produto',
+  templateUrl: './produto.component.html'
 })
 
 export class ProdutoComponent {
@@ -16,3 +15,4 @@ export class ProdutoComponent {
     return this.nome;
   }
 }
+
