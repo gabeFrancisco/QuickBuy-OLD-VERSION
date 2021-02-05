@@ -1,9 +1,9 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3 text-light"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 text-dark"
   >
     <div class="container">
-      <a class="navbar-brand text-light" [routerLink]="['/']">QuickBuy.Web</a>
+      <a class="navbar-brand text-dark" [routerLink]="['/']">QuickBuy.Web</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,16 +23,22 @@
           <li class="nav-item"
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link text-light" [routerLink]="['/']">Home</a>
+            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-light" [routerLink]="['/counter']">Counter</a>
+            <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-light" [routerLink]="['/fetch-data']">Fetch data</a>
+            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-light" [routerLink]="['/produto']">Produto</a>
+            <a class="nav-link text-dark" [routerLink]="['/produto']">Produto</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="btn btn-success login-btn" [routerLink]="['/cadastrar']">Cadastrar</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="btn btn-primary login-btn" [routerLink]="['/login']">Login</a>
           </li>
         </ul>
       </div>

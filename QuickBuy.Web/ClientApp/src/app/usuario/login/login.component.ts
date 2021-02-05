@@ -7,5 +7,5 @@ import { Component } from '@angular/core'
 })
 
 export class LoginComponent {
-
+  public email = "gabriel@teste.com"
 }
