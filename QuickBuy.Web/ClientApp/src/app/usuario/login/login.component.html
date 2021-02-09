@@ -1,19 +1,54 @@
 <div class="text-center">
   <div class="container">
-    <form class="form-control">
+    <form>
       <div class="container login-form">
-        <h3 class="h4">Login do Cliente</h3>
+        <h2 class="h4">Login do Cliente</h2>
       </div>
       <label for="inputEmail" class="sr-only">Email</label>
       <input class="form-control" type="email" id="inputEmail"
-             name="email" placeholder="Informe o seu email" />
+             name="email" placeholder="Informe o seu email"
+             [(ngModel)]="usuario.email"
+             #email="ngModel"
+             email
+             [ngClass]="{
+              'is-invalid': email.invalid && (email.dirty || email.touched),
+              'is-valid': email.valid && (email.dirty || email.touched)
+             }"
+             required/>
 
-      <label for="inputEmail" class="sr-only">Senha</label>
+      <div class="invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors.required">
+          E-mail deve ser preenchido.
+        </div>
+        <div *ngIf="email.errors.email">
+          E-mail deve estar em formato correto.
+        </div>
+      </div>
+
+      <label for="inputSenha" class="sr-only">Senha</label>
       <input class="form-control" type="password" id="inputSenha"
-             name="Senha" placeholder="Informe a sua senha" />
+             name="senha" placeholder="Informe a sua senha"
+             [ngClass]="{
+              'is-invalid': senha.invalid && senha.touched,
+              'is-valid': senha.valid && senha.touched
+             }"
+             [(ngModel)]="usuario.senha"
+             #senha="ngModel"
+             senha
+             required
+             />
 
-      <button class="btn btn-primary btn-block login-btn" type="submit">Entrar!</button>
-      {{  }}
+      <div class="invalid-feedback" *ngIf="senha.invalid && senha.touched">
+        <div *ngIf="senha.errors.required">
+          O campo senha deve ser preenchido.
+        </div>
+        <div *ngIf="senha.errors.senha">
+          A senha não pode ser menor que 8 caracteres.
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block login-btn" type="submit" (click)="entrar()">Entrar!</button>
+      <img src="../../../assets/img/buy.jpg" title="Titulo adicionado ao componente" />
     </form>
   </div>
 </div>
