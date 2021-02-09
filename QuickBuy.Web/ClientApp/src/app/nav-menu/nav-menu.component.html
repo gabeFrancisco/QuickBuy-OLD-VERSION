@@ -1,9 +1,9 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 text-dark"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3 text-white"
   >
     <div class="container">
-      <a class="navbar-brand text-dark" [routerLink]="['/']">QuickBuy.Web</a>
+      <a class="navbar-brand text-dark" [routerLink]="['/']"><img id="logo" src="../../assets/img/quickbuy-logo.png" /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,22 +23,22 @@
           <li class="nav-item"
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }">
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
+            <a class="nav-link text-white" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']">Counter</a>
+            <a class="nav-link text-white" [routerLink]="['/counter']">Counter</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']">Fetch data</a>
+            <a class="nav-link text-white" [routerLink]="['/fetch-data']">Fetch data</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/produto']">Produto</a>
+            <a class="nav-link text-white" [routerLink]="['/produto']">Produto</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="btn btn-success login-btn" [routerLink]="['/cadastrar']">Cadastrar</a>
+            <a class="nav-link text-white" [routerLink]="['/cadastrar']">Cadastrar</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="btn btn-primary login-btn" [routerLink]="['/login']">Login</a>
+            <a class="nav-link text-white" [routerLink]="['/entrar']">Login</a>
           </li>
         </ul>
       </div>

@@ -21,3 +21,12 @@ html {
   width: 100px;
   margin-left: 20px;
 }
+
+#logo{
+    height: auto;
+    width: 170px;
+}
+
+header{
+    position: sticky;
+}
