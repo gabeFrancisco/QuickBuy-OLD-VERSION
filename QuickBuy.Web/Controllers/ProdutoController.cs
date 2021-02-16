@@ -29,8 +29,7 @@ namespace QuickBuy.Web.Controllers
                 return BadRequest(ex.ToString());
             }
         }
-
-
+        
         [HttpPost]
         public IActionResult Post([FromBody]Produto produto)
         {
